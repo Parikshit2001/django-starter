@@ -25,7 +25,7 @@ ENV/
 local_settings.py
 
 # Django Static files
-static/
+# static/
 
 # Django Media files
 media/
