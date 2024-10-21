@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout.html" %} 
 
 {% block title %}
   Hello
@@ -6,4 +6,17 @@
 
 {% block content %}
   <h1>Chai Aur Code HomePage - Chai Detail Page</h1>
+  <div class="grid grid-cols-4 gap-4">
+    {% for chai in chais  %}
+      <div class="bg-gray-500 px-2 py-2 rounded-xl">
+        <img class="rounded-xl w-80 h-80" src="{{chai.image.url}}" alt="">
+        <h3 class="text-2xl font-bold">{{chai.name}}</h3>
+        <a href="">
+          <button type="button">
+            {{chai.type}} - {{chai.id}}
+          </button>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
 {% endblock %}
